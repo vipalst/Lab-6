@@ -1,0 +1,36 @@
+<html>
+<body>
+	<input type="button" value="Добавить поля input" id="add" onclick = "function1()">
+	<form onsubmit="function2()" id="submitform"></form>
+		<script>
+			function function1() {
+				add.onclick = null;
+
+				let input1 = document.createElement("input");
+				input1.type = "text";
+				submitform.append(input1);
+			
+				let input2 = document.createElement("input");
+				input2.type = "checkbox";
+				submitform.append(input2);
+			
+				let input3 = document.createElement("input");
+				input3.type = "date";
+				submitform.append(input3);
+				
+				let input4 = document.createElement("input");
+				input4.type = "submit";
+				submitform.append(input4);
+			};
+			
+			function function2() {
+				if (document.forms[0].elements[0].value) {alert(document.forms[0].elements[0].value)};
+				
+				if (document.forms[0].elements[1].value) {alert(document.forms[0].elements[1].value)};
+				
+				if (document.forms[0].elements[2].value) {alert(document.forms[0].elements[2].value)};
+			};
+			
+		</script>
+</body>
+</html>
